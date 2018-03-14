@@ -15,7 +15,10 @@ var coin = {
     }
 };
 
+const txtArray = [];
 for (let i = 0; i < 20; i++) {
     coin.flip();
-    document.body.appendChild(coin.toHTML());
+    txtArray.push(coin.toString());
+    document.getElementById("images").appendChild(coin.toHTML());
 }
+document.getElementById("text").innerHTML = txtArray.join(", ");
